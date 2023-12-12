@@ -1,16 +1,12 @@
 import React from 'react';
-import Header from './Header';
-import Sidebar from './Sidebar';
+import Header from '~/components/Layouts/components/Header';
 
 function DefaultLayout({ children }) {
     return (
         <div>
             <Header />
             <main>
-                <div className="container">
-                    <Sidebar />
-                    {children}
-                </div>
+                <div className="container">{children}</div>
             </main>
         </div>
     );
