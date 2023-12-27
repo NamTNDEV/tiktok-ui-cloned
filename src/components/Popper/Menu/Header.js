@@ -9,9 +9,9 @@ const cx = classNames.bind(styles);
 
 function Header({ title, onBack }) {
     return (
-        <header className={cx('menu-header')}>
+        <header className={cx('menu-header')} onClick={onBack}>
             <button className={cx('menu-header__back')}>
-                <FontAwesomeIcon icon={faChevronLeft} onClick={onBack} />
+                <FontAwesomeIcon icon={faChevronLeft} className={cx('menu-header__back-icon')} />
             </button>
             <strong className={cx('menu-header__title')}>{title}</strong>
         </header>
